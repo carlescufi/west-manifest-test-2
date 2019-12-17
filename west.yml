@@ -1,0 +1,34 @@
+manifest:
+  remotes:
+    - name: ncs
+      url-base: https://github.com/NordicPlayground
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: throwtheswitch
+      url-base: https://github.com/ThrowTheSwitch
+    - name: armmbed
+      url-base: https://github.com/ARMmbed
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: master
+      import: true
+    - name: nrfxlib
+      path: nrfxlib
+      revision: f579faa502d3fbbfe41af966dcec82d3f6664958
+    - name: cmock
+      path: test/cmock
+      revision: c243b9a7a7b3c471023193992b46cf1bd1910450
+      remote: throwtheswitch
+    - name: unity
+      path: test/cmock/vendor/unity
+      revision: 031f3bbe45f8adf504ca3d13e6f093869920b091
+      remote: throwtheswitch
+    - name: mbedtls-nrf
+      repo-path: mbedtls
+      revision: mbedtls-2.16.3
+      remote: armmbed
+
+  self:
+    path: nrf
